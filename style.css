@@ -27,13 +27,14 @@ h1 {
   justify-content: center;
 }
 
-.blue {
+#blue {
   height: 50%;
   width: 50%;
   border-top-left-radius: 99%;
   border-top: solid blue 100px;
   border-left: solid blue 100px;
   cursor: pointer;
+  transition: 0.2s ease-out;
 }
 
 .green {
@@ -58,30 +59,29 @@ h1 {
   height: 50%;
   width: 50%;
   border-bottom-right-radius: 99%;
-  border-bottom: solid rgb(210, 255, 70) 100px;
-  border-right: solid rgb(210, 255, 70) 100px;
+  border-bottom: solid rgb(255, 253, 125) 100px;
+  border-right: solid rgb(255, 253, 125) 100px;
   cursor: pointer;
 }
 
-/* ACTIVE */
-.blue:active {
+/* JS */
+#blue.active {
   border-color: rgb(0, 128, 250);
-  transition: 0.1s ease-out;
 }
 
-.green:active {
+#green.active {
+  transition: 1s ease-out;
   border-color: rgb(100, 201, 0);
-  transition: 0.1s ease-out;
 }
 
-.red:active {
+.lightBlueRed {
+  transition: 1s ease-out;
   border-color: red;
-  transition: 0.1s ease-out;
 }
 
-.yellow:active {
+.lightBlueYellow {
+  transition: 1s ease-out;
   border-color: yellow;
-  transition: 0.1s ease-out;
 }
 
 /* BOUTON PLAY */

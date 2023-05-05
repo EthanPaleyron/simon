@@ -1,10 +1,12 @@
-const blue = document.getElementById('b');
-const green = document.getElementById('g');
-const red = document.getElementById('r');
-const yellow = document.getElementById('y');
+const content = document.getElementById('content');
 
-let table = [blue, green, red, yellow];
+const firstItem = content.children[0];
+const secondItem = content.children[1];
+const thridItem = content.children[2];
+const lastItem = content.children[3];
 
-for (let i = 0; i < table.length; i++) {
-  
-}
+firstItem.classList.add("active");
+
+setTimeout(() => {
+  firstItem.classList.remove("active")
+}, 1000)
