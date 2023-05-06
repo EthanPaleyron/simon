@@ -1,12 +1,13 @@
 const content = document.getElementById('content');
+const play = document.getElementById('play');
 
-const firstItem = content.children[0];
-const secondItem = content.children[1];
-const thridItem = content.children[2];
-const lastItem = content.children[3];
 
-firstItem.classList.add("active");
+play.addEventListener('click', (item) => {
+  const firstItem = content.children[0];
 
-setTimeout(() => {
-  firstItem.classList.remove("active")
-}, 1000)
+  firstItem.classList.add("active");
+
+  setTimeout(() => {
+    firstItem.classList.remove("active");
+  }, 400);
+});

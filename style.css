@@ -12,76 +12,77 @@ body {
 
 h1 {
   margin: 1rem 0;
-  color: white;
-  text-align: center;
+  color: #DFE0E5;
+  font-size: 4rem;
   font-weight: bold;
+  user-select: none;
+  text-align: center;
 }
 
 /* SIMON */
 .content {
-  margin: 4em auto;
+  position: relative;
+  margin: 1.5em auto;
   width: 30rem;
   height: 30rem;
+  border: solid 6px #000;
+  border-radius: 50%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-#blue {
-  height: 50%;
-  width: 50%;
-  border-top-left-radius: 99%;
-  border-top: solid blue 100px;
-  border-left: solid blue 100px;
-  cursor: pointer;
-  transition: 0.2s ease-out;
+  align-items: center;
 }
 
 .green {
   height: 50%;
   width: 50%;
-  border-top-right-radius: 99%;
+  border-top-left-radius: 99%;
   border-top: solid green 100px;
-  border-right: solid green 100px;
+  border-left: solid green 100px;
   cursor: pointer;
+  transition: 0.2s ease-out;
 }
 
 .red {
   height: 50%;
   width: 50%;
-  border-bottom-left-radius: 99%;
-  border-bottom: solid rgb(180, 20, 20) 100px;
-  border-left: solid rgb(180, 20, 20) 100px;
+  border-top-right-radius: 99%;
+  border-top: solid #BB0416 100px;
+  border-right: solid #BB0416 100px;
   cursor: pointer;
+  transition: 0.2s ease-out;
 }
 
 .yellow {
   height: 50%;
   width: 50%;
-  border-bottom-right-radius: 99%;
-  border-bottom: solid rgb(255, 253, 125) 100px;
-  border-right: solid rgb(255, 253, 125) 100px;
+  border-bottom-left-radius: 99%;
+  border-bottom: solid #D0C866 100px;
+  border-left: solid #D0C866 100px;
   cursor: pointer;
+  transition: 0.2s ease-out;
 }
 
-/* JS */
-#blue.active {
-  border-color: rgb(0, 128, 250);
+.blue {
+  height: 50%;
+  width: 50%;
+  border-bottom-right-radius: 99%;
+  border-bottom: solid #067ABA 100px;
+  border-right: solid #067ABA 100px;
+  cursor: pointer;
+  transition: 0.2s ease-out;
 }
 
-#green.active {
-  transition: 1s ease-out;
-  border-color: rgb(100, 201, 0);
-}
-
-.lightBlueRed {
-  transition: 1s ease-out;
-  border-color: red;
-}
-
-.lightBlueYellow {
-  transition: 1s ease-out;
-  border-color: yellow;
+/* TURN */
+.turn {
+  position: absolute;
+  z-index: 1;
+  color: #DFE0E5;
+  font-size: 3rem;
+  user-select: none;
+  border: solid #000 6px;
+  border-radius: 50%;
+  padding: 21% 11%;
 }
 
 /* BOUTON PLAY */
@@ -91,16 +92,44 @@ h1 {
   justify-content: center;
 }
 
-.play {
+.play-button {
+  color: #DFE0E5;
   font-size: 1.5rem;
   font-weight: bold;
-  background-color: gainsboro;
-  border-radius: 2.5rem;
-  border: none;
-  padding: 1.5rem 2.5rem;
+  background-color: #1A2A33;
+  border: solid #DFE0E5 3px;
+  padding: 0.5rem 1.5rem;
   cursor: pointer;
 }
 
-.play:hover {
-  background-color: white;
+.play-button:hover {
+  animation: play 0.3s ease-out infinite;
+}
+
+@keyframes play {
+  25% {
+    transform: translateY(2px);
+  }
+
+  75% {
+    transform: translateY(-2px);
+  }
+}
+
+/* JS */
+
+#green.active {
+  border-color: rgb(100, 201, 0);
+}
+
+#red.active {
+  border-color: red;
+}
+
+#blue.active {
+  border-color: rgb(0, 128, 250);
+}
+
+#yellow.active {
+  border-color: yellow;
 }
