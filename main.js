@@ -2,7 +2,7 @@ const content = document.getElementById('content');
 const play = document.getElementById('play');
 
 
-play.addEventListener('click', (item) => {
+play.addEventListener('click', () => {
   const firstItem = content.children[0];
 
   firstItem.classList.add("active");
